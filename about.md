@@ -3,11 +3,11 @@ layout: page
 title: About
 permalink: /about/
 ---
-Hello I am Puppycat, PhD. I am a Python master.
+Hello I am Harvey. I am a Python beginner.
 
 ## More information
 
-My favorite food is spinach. I like to SCREAM when I don't get my way but that's okay because I'm cute.
+N/A
 
 ![](/images/puppycat.jpg){:height="300px"}
 
