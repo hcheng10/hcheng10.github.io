@@ -11,6 +11,6 @@ N/A
 
 ![](/images/puppycat.jpg){:height="300px"}
 
-### Contact me
+### Do not Contact me!!!
 
-[puppycat@puppycat.org](mailto:puppycat@puppycat.org)
+[:)](mailto:puppycat@puppycat.org)
