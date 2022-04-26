@@ -431,7 +431,7 @@ ax.set(title='Bar Plot of Moives or TV-Shows Verse Shared Actors')
 
 
     
-![png]({{ site.baseurl }}/images/output_24_1.png)
+![png]({{ site.baseurl }}/images/hw2_pic/output_24_1.png)
     
 
 
