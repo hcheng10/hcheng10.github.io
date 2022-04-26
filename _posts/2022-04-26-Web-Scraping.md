@@ -1,10 +1,10 @@
 ---
 layout: post
-title: How to Make Histogram with Plotly
+title: Crawling Data by Using Scrapy
 ---
 What’s your favorite movie or TV show?
 
-## Intro to Web Scraping
+## Intro to Web Scrapy
 
 In this post, we will find out What movies or TV shows share actors with our favorite movie or show by using Scrapy. The website I will scrape in this post is IMBD,  and explain the steps on how to scrape data from the web.
 
