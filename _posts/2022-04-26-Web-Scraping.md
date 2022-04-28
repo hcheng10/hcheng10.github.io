@@ -45,6 +45,7 @@ class ImdbSpider(scrapy.Spider):
     
     start_urls = ['https://www.imdb.com/title/tt10872600/'] # start url
 
+    # This method will crawl the web url of cast & crew, and call parse_full_credits to access the url
     def parse(self, response):
         next_page = response.css("a[href*='fullcredits']").attrib['href']  # get element that contain url
 
@@ -52,7 +53,8 @@ class ImdbSpider(scrapy.Spider):
             next_page = response.urljoin(next_page) # extract the url
             yield scrapy.Request(next_page, callback = self.parse_full_credits) # call parse_full_credits
 
-
+    # this method is looping all the actors that list under cast on the web url we input for this method,
+    # and call parse_actor_page method to access each actor's web link.
     def parse_full_credits(self, response):
         cast_link = [a.attrib["href"] for a in response.css("td.primary_photo a")]
 
@@ -61,7 +63,7 @@ class ImdbSpider(scrapy.Spider):
                 next_page = response.urljoin(c)
                 yield scrapy.Request(next_page, callback = self.parse_actor_page) # call parse_actor_page
 
-
+    # this method crawls actors' name and moives orTV-shows
     def parse_actor_page(self, response):
         actor_name = response.css(".header").css("span.itemprop::text").get()
 
@@ -83,6 +85,7 @@ As we can see, there is Spider subclasses <u>scrapy.Spider</u> and defines some 
 
 
 ```python
+# # This method will crawl the web url of cast & crew, and call parse_full_credits to access the url
 def parse(self, response):
     next_page = response.css("a[href*='fullcredits']").attrib['href']  # get element that contain url
 
@@ -109,6 +112,7 @@ This is copy of the HTML that contain URL of the cast & crew page in the website
 
 
 ```python
+# this method is looping all the actors that list under cast on the web url we input for this method
 def parse_full_credits(self, response):
     cast_link = [a.attrib["href"] for a in response.css("td.primary_photo a")]
 
@@ -139,6 +143,7 @@ Finally, we can start to introduce the parse_actor_page(self, response) method
 
 
 ```python
+# this method crawls actors' name and moives orTV-shows
 def parse_actor_page(self, response):
         actor_name = response.css(".header").css("span.itemprop::text").get()
 
