@@ -820,22 +820,12 @@ history5 = model4.fit(test_dataset,
 
 
 ```python
-plt.plot(history5.history["accuracy"], label = "testing")
-plt.gca().set(xlabel = "epoch", ylabel = "accuracy")
-plt.legend()
+model4.evaluate(test_dataset)
 ```
+    6/6 [==============================] - 1s 67ms/step - loss: 0.0167 - accuracy: 0.9948
+    [0.016668593510985374, 0.9947916865348816]
 
 
 
 
-    <matplotlib.legend.Legend at 0x7f0d9cea7cd0>
-
-
-
-
-    
-![png]({{ site.baseurl }}/images/hw3_pic/output_52_1.png)
-    
-
-
-The average accuracy for testing data is **95%**, that's a pretty good number for the testing result.
+The average accuracy for testing data is **99%**, that's a pretty good number for the testing result.
