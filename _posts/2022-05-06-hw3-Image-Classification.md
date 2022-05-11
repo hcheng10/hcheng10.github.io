@@ -761,7 +761,7 @@ plt.legend()
     
 
 
-1. The validation accuracy of my model stabilized **between 797% and 98%**, which is **47% higher the baseline on average**.
+1. The validation accuracy of my model stabilized **between 97% and 98%**, which is **47% higher the baseline on average**.
 2. On average, this model gets approximately 97.5% validation accuracy, which is 42% higher than the model1
 3. On the graph, we can see the accuracy for training and validation are close to each other when epochs increases, the overfitting problem is reducing when epochs increasing.
 
