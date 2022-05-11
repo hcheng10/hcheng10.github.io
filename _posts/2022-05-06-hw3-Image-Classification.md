@@ -766,59 +766,6 @@ plt.legend()
 3. On the graph, we can see the accuracy for training and validation are close to each other when epochs increases, the overfitting problem is reducing when epochs increasing.
 
 ## 6. Score on Test Data
-
-
-
-
-```python
-history5 = model4.fit(test_dataset,
-                     epochs=20, # how many rounds of training to do
-                     )
-```
-
-    Epoch 1/20
-    6/6 [==============================] - 1s 76ms/step - loss: 0.1697 - accuracy: 0.9271
-    Epoch 2/20
-    6/6 [==============================] - 1s 64ms/step - loss: 0.1308 - accuracy: 0.9375
-    Epoch 3/20
-    6/6 [==============================] - 1s 61ms/step - loss: 0.1416 - accuracy: 0.9427
-    Epoch 4/20
-    6/6 [==============================] - 1s 62ms/step - loss: 0.1420 - accuracy: 0.9531
-    Epoch 5/20
-    6/6 [==============================] - 1s 60ms/step - loss: 0.1311 - accuracy: 0.9479
-    Epoch 6/20
-    6/6 [==============================] - 1s 58ms/step - loss: 0.0881 - accuracy: 0.9531
-    Epoch 7/20
-    6/6 [==============================] - 1s 59ms/step - loss: 0.1525 - accuracy: 0.9271
-    Epoch 8/20
-    6/6 [==============================] - 1s 62ms/step - loss: 0.1159 - accuracy: 0.9479
-    Epoch 9/20
-    6/6 [==============================] - 1s 88ms/step - loss: 0.2248 - accuracy: 0.9062
-    Epoch 10/20
-    6/6 [==============================] - 1s 77ms/step - loss: 0.1090 - accuracy: 0.9479
-    Epoch 11/20
-    6/6 [==============================] - 1s 60ms/step - loss: 0.1754 - accuracy: 0.9323
-    Epoch 12/20
-    6/6 [==============================] - 1s 60ms/step - loss: 0.1032 - accuracy: 0.9531
-    Epoch 13/20
-    6/6 [==============================] - 1s 60ms/step - loss: 0.0976 - accuracy: 0.9583
-    Epoch 14/20
-    6/6 [==============================] - 1s 63ms/step - loss: 0.0702 - accuracy: 0.9792
-    Epoch 15/20
-    6/6 [==============================] - 1s 59ms/step - loss: 0.1129 - accuracy: 0.9479
-    Epoch 16/20
-    6/6 [==============================] - 1s 59ms/step - loss: 0.0966 - accuracy: 0.9583
-    Epoch 17/20
-    6/6 [==============================] - 1s 62ms/step - loss: 0.1231 - accuracy: 0.9479
-    Epoch 18/20
-    6/6 [==============================] - 1s 58ms/step - loss: 0.1078 - accuracy: 0.9583
-    Epoch 19/20
-    6/6 [==============================] - 1s 62ms/step - loss: 0.1230 - accuracy: 0.9635
-    Epoch 20/20
-    6/6 [==============================] - 1s 59ms/step - loss: 0.0891 - accuracy: 0.9583
-    
-
-
 ```python
 model4.evaluate(test_dataset)
 ```
