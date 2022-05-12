@@ -101,29 +101,33 @@ Let's briefly explore our data set. **Write a function to create a two-row visua
 
 
 ```python
-class_names = train_dataset.class_names
+def print_cats_and_dogs(train_dataset):
+    class_names = train_dataset.class_names
 
-cat, dog, index = 0, 0, 0
-fig,ax = plt.subplots(2, 3, figsize=(10, 10))
-for images, labels in train_dataset.take(1):
-  for i in range (100):
-    if (class_names[labels[i]] == 'cats'):
-      if (cat >= 3):
-        continue
-      index = cat + 0
-      cat += 1
-    else:
-      if (dog >= 3):
-        continue
-      index = dog + 3
-      dog += 1
+    cat, dog, index = 0, 0, 0
+    fig,ax = plt.subplots(2, 3, figsize=(10, 10))
+    for images, labels in train_dataset.take(1):
+      for i in range (100):
+        if (class_names[labels[i]] == 'cats'):
+          if (cat >= 3):
+            continue
+          index = cat + 0
+          cat += 1
+        else:
+          if (dog >= 3):
+            continue
+          index = dog + 3
+          dog += 1
 
-    ax.flat[index].imshow(images[i].numpy().astype("uint8"))
-    ax.flat[index].set(title=class_names[labels[i]])
-    ax.flat[index].axis("off")
+        ax.flat[index].imshow(images[i].numpy().astype("uint8"))
+        ax.flat[index].set(title=class_names[labels[i]])
+        ax.flat[index].axis("off")
 
-    if (index == 5): # when we have 6 images, break the loop
-      break
+        if (index == 5): # when we have 6 images, break the loop
+          break
+
+
+print_cats_and_dogs(train_dataset)
 ```
 
 ![png]({{ site.baseurl }}/images/hw3_pic/output_8_0.png)
