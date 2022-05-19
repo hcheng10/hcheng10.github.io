@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Fake News Classification by NLP
+title: Web Development (Flask)
 ---
 Blog Post: Web Development
 
