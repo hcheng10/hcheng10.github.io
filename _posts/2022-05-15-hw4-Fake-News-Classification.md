@@ -718,8 +718,11 @@ table1[29:] # last 20 epochs
 
 ```python
 from matplotlib import pyplot as plt
-plt.plot(history1.history["accuracy"])
-plt.plot(history1.history["val_accuracy"])
+plt.plot(history1.history["accuracy"], label = "training")
+plt.plot(history1.history["val_accuracy"], label = "validation")
+plt.gca().set(xlabel = "epoch", ylabel = "accuracy")
+plt.title("training verses validation")
+plt.legend()
 ```
 
 
@@ -1032,8 +1035,11 @@ table2[29:]  # last 20 epochs
 
 
 ```python
-plt.plot(history2.history["accuracy"])
-plt.plot(history2.history["val_accuracy"])
+plt.plot(history2.history["accuracy"], label = "training")
+plt.plot(history2.history["val_accuracy"], label = "validation")
+plt.gca().set(xlabel = "epoch", ylabel = "accuracy")
+plt.title("training verses validation")
+plt.legend()
 ```
 
 
@@ -1362,8 +1368,11 @@ table3[29:] # last 20 epochs
 
 
 ```python
-plt.plot(history3.history["accuracy"])
-plt.plot(history3.history["val_accuracy"])
+plt.plot(history3.history["accuracy"], label = "training")
+plt.plot(history3.history["val_accuracy"], label = "validation")
+plt.gca().set(xlabel = "epoch", ylabel = "accuracy")
+plt.title("training verses validation")
+plt.legend()
 ```
 
 
