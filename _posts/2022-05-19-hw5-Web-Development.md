@@ -205,6 +205,24 @@ In the web_helper.py(inside the code I posted above), we also defined random_mes
 example:
 ![p4]({{ site.baseurl }}/images/hw5_pic/p4.jpg)
 
+<br>
+<br>
+<br>
+## HTML Template
+
+In this project, most content displayed on the web is written in HTML files. The HTML content is displayed below. We can see if we manually type everything of the HTML file, it's actually a little pain so we usually use HTML templates to build the frame and then fill it with the text we want. 
+
+1. **base.html**: The base.html has the navigation elements which are put within li(stands for list) tags, and the {{ url_for('main') }} is controlled by the python code. When we first open the web, it navigates us into the main.html(which is embedded in the base.html), what happens on the server-side, it loads the base.html first and runs the python code to embed the mian.html in, then displays the web.
+2. **submit.html**: In general, if a user clicks the submit text on the navigation part. {{ url_for('submit') }} will be execute and repacing the previously embedded HTML.page by submit.htm. In the base.html, we have the {\% block header \%}{\% endblock \%}, and the {\% block content \%}{\% endblock \%} are used for HTML place holder. We can also find there are the same holders in sumbit.html. Above these holders, there is a {\% extends 'base.html' \%} tells computer submit.html extends the base.html. After embedding, what we wrote in {\% block header \%}{\% endblock \%}, and the {\% block content \%}{\% endblock \%} in submit.html will be displayed in the corresponding holders in base.html.
+
+### base.html
+
+![]({{ site.baseurl }}/images/hw5_pic/base_html.jpg)
+
+### submit.html
+
+![]({{ site.baseurl }}/images/hw5_pic/submit_html.jpg)
+
 ## 3. Customize the App
 
 Though this app used a lot of python codes, our goal is to use python code to create HTML scripts, and HTML scripts can be customized by using CSS styling. Without the style.css file, our web will look very boring:
