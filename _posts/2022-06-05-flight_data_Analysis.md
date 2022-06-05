@@ -3,6 +3,8 @@ layout: post
 title: Flight Dealy Analysis
 ---
 
+[click for git repo](https://github.com/hcheng10/Web-Development)
+
 ## §1. Introduction
 The aim of this project is to use the data set provided by the U.S. Department of Transportation
 (DOT) Bureau of Transportation Statistics to analyze factors to predict the number of Total flight and punctuality rate for each day. I
