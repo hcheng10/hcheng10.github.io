@@ -1531,6 +1531,3 @@ There also is a place holder in the 'Data_preparation.html':
 </script>
 ```
 Here, we need few more steps to actually make a plot that HTML could 'understand'. '<script src='https://cdn.plot.ly/plotly-latest.min.js'></script>' import the JavaScript package which use to convert JSON string to HTML. Plotly.newPlot() is the function of the package. 'chart1' is the id, which tells where to 'draw' the plot. The first line <span id="chart1"></span> is the place where plot should be draw.
-
-## §6. Acknowledgment
-Many thanks to our dearest Harlin who provided us with this wonderful to let us practice what we’ve learned in real life cases.
